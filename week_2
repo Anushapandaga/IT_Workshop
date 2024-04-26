@@ -1,0 +1,201 @@
+//week2
+touch geekfile.txt
+user@anusha:~$ grep -o "unix" geekfile.txt
+user@anusha:~$ grep "^unix" geekfile.txt
+user@anusha:~$ grep "^unix" geekfile.txt
+unix is great os.unix was developed in Bell labs.
+user@anusha:~$ grep -o "unix" geekfile.txt
+unix
+unix
+user@anusha:~$ grep -o "unix" geekfile.txt
+unix
+unix
+user@anusha:~$ grep -v "unix" geekfile.txt
+user@anusha:~$ cat file2
+hii hello this is Anusha
+
+user@anusha:~$ cat>file.txt
+anusha
+thulasi
+navya
+kushi
+teju
+user@anusha:~$ sort -r file.txt
+thulasi
+teju
+navya
+kushi
+anusha
+user@anusha:~$ sort -n file.txt
+anusha
+kushi
+navya
+teju
+thulasi
+
+user@anusha:~$ cat>file2.txt
+2
+6
+1
+9
+4
+user@anusha:~$ sort -n file2.txt
+1
+2
+4
+6
+9
+user@anusha:~$ cat>number.txt
+9
+0 
+1  
+5
+2
+1
+1
+3
+1
+^C
+user@anusha:~$ sort -M number.txt
+0 
+1
+1
+1
+1 
+2
+3
+5
+9
+user@anusha:~$ sort -u number.txt
+0 
+1
+1 
+2
+3
+5
+9
+user@anusha:~$ sort -r number.txt
+9
+5
+3
+2
+1 
+1
+1
+1
+0 
+user@anusha:~$  sort -r monthfile.txt
+user@anusha:~$ sort -r monthfile.txt
+user@anusha:~$ ^C
+user@anusha:~$ sort -M monthfile.txt
+user@anusha:~$ cat>monthfile.txt
+june 
+august
+january
+february
+april
+september
+may^C
+
+^C
+user@anusha:~$ sort -M monthfile.txt
+
+january
+february
+april
+may^C
+june 
+august
+september
+user@anusha:~$ sort -r monthfile.txt
+september
+may^C
+june 
+january
+february
+august
+april
+
+user@anusha:~$ cat>sedfile.txt
+unix command
+^C
+user@anusha:~$ cat>sedfile.txt
+unix command                        
+linux software and ubuntu system
+rgukt university
+^C
+user@anusha:~$ sed 's/rgukt/RGUKT/'sedfile.txt
+sed: -e expression #1, char 15: unknown option to `s'
+user@anusha:~$ sed 'u/rgukt/RGUKT/'sedfile.txt
+sed: -e expression #1, char 1: unknown command: `u'
+user@anusha:~$ sed '/RGUKT/d' sedfile.txt
+unix command                        
+linux software and ubuntu system
+rgukt university
+user@anusha:~$ unix command
+
+Command 'unix' not found, did you mean:
+
+  command 'uni' from deb uniconf-tools (4.6.1-14build1)
+  command 'uniq' from deb coreutils (8.30-3ubuntu2)
+
+Try: sudo apt install <deb name>
+
+user@anusha:~$ linux software and ubuntu system
+
+Command 'linux' not found, did you mean:
+
+  command 'linex' from snap linex (0.1.6)
+
+See 'snap info <snapname>' for additional versions.
+
+user@anusha:~$ rgukt university
+rgukt: command not found
+user@anusha:~$ cat>sedfile.txt
+cat>sedfile.txt
+rgukt
+unix
+linux is a command
+ubuntu
+rgukt                                             
+^C
+user@anusha:~$ 2d
+2d: command not found
+user@anusha:~$ sed '2d' sedfile.txt
+rakeshcat>sedfile.txt
+unix
+linux is a command
+ubuntu
+rgukt
+user@anusha:~$ cat>sedfile.txt
+rgukt
+anusha
+pandaga 563@
+basar
+^C
+user@anusha:~$ sed '2d' sedfile.txt
+rgukt
+pandaga 563@
+basar
+user@anusha:~$ sed '1,3d' sedfile.txt
+basar
+user@anusha:~$  cat>awkfile.txt
+anu storge id 7422
+akhil 8756
+divya 0981
+user@anusha:~$ awk '{print $1}' awkfile.txt
+anu
+akhil
+divya
+user@anusha:~$ awk '{print $2,$3}' awkfile.txt
+storge id
+8756 
+0981 
+user@anusha:~$ free -m
+              total        used        free      shared  buff/cache   available
+Mem:           7730        1306        4601         196        1822        5964
+Swap:          2047           0        2047
+user@anusha:~$ awk 'NS=={PRINTns $0}' free -m
+user@anusha:~$ cat>file.txt
+//shutdown
+
